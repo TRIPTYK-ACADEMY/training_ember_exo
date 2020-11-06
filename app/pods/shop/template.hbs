@@ -1,0 +1,10 @@
+<Ui::SelectUi 
+  @options={{this.options}}
+  @field="title"
+  @route="shop"
+/>
+<CartsUi>
+  {{#each this.filteredWines as |wine|}}
+    <CartsUi::CartUi @model={{wine}} />
+  {{/each}}
+</CartsUi>

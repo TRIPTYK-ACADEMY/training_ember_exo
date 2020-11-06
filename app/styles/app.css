@@ -1,3 +1,30 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.cartContent{
+  bottom: 10px
+}
+
+.cartContent:after {
+  content: " ";
+  position: absolute;
+  right: 50px;
+  top: -16px;
+  border-top: none;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 16px solid #CBD5E0;
+}
+
+.scale-to-y{
+  transform: scaleY(1) translateY(100%);
+}
+
+.scale-from-y{
+  transform: scaleY(0) translateY(0);
+}
+
+.notification{
+  transform: translateY(-170%) translateX(100%);
+}

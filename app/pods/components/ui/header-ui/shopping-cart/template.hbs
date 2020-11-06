@@ -1,0 +1,29 @@
+<div class="relative" {{on-click-outside (fn this.closeMenu)}}>
+  <button type="button" class="group py-12 px-12 focus:outline-none" {{on 'click' this.openMenu}}>
+    <span class="relative">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="h-6 fill-current text-teal-900 group-hover:text-indigo-900 transition-all duration-200 ease">
+        <path d="M4 2h16l-3 9H4a1 1 0 1 0 0 2h13v2H4a3 3 0 0 1 0-6h.33L3 5 2 2H0V0h3a1 1 0 0 1 1 1v1zm1 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm10 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
+      </svg>
+      <span class="notification absolute top-0 right-0 text-xs block h-6 w-6 flex justify-center items-center rounded-full text-white bg-red-400">{{this.cart.numberOfItems}}</span>
+    </span>
+  </button>
+  <div class="absolute right-0 bottom-0 cartContent w-64 bg-white transform transition-transform duration-300 ease {{if this.isMenuActive "scale-to-y" "scale-from-y"}} mt-8 rounded shadow-xl border-2 border-gray-400" >
+    <h3 class="py-2 px-4 border-b-2 border-gray-400 text-teal-900 font-bold">Votre panier</h3>
+    <div>
+      {{#if this.cart.items.length}}
+        {{#each this.cart.items as |item|}}
+          <p class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900">
+            {{item.qt}} x {{item.wine.title}}
+          </p>
+        {{/each}}
+      {{else}}
+          <p class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900">
+            Aucun vin n'a été séléctionné
+          </p>
+      {{/if}}
+    </div>
+    <div class="py-2 px-4 border-t-2 border-gray-400">
+      <h3 class="text-teal-900 font-bold">Total : {{this.cart.total}} €</h3>
+    </div>
+  </div>
+</div>

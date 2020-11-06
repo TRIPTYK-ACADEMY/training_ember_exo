@@ -24,11 +24,12 @@ export default function() {
     https://www.ember-cli-mirage.com/docs/route-handlers/shorthands
   */
  this.timing = 0;
- this.get('/wines');
- this.post('/wines');
- this.get('/wines/:id');
- this.put('/wines/:id'); // or this.patch
- this.patch('/wines/:id'); // or this.patch
- this.del('/wines/:id');
+ this.resource('wine')
+//  this.get('/wines');
+//  this.post('/wines');
+//  this.get('/wines/:id');
+//  this.put('/wines/:id'); // or this.patch
+//  this.patch('/wines/:id'); // or this.patch
+//  this.del('/wines/:id');
 
 }

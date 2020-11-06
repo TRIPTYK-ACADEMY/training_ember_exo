@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'training-ember-exo',
+    podModulePrefix: 'training-ember-exo/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',

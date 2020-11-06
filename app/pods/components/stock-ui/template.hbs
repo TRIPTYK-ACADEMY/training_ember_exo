@@ -1,0 +1,12 @@
+<ul class="w-1/2 min-w-450">
+  {{#each @wines as |wine|}}
+    <li class="mb-3">
+      <LinkTo @route="wines.wine-detail" @model={{wine.id}} class="rounded-full block px-6 py-2 bg-gray-100 flex justify-between transition-all duration-300 ease hover:bg-indigo-900 group hover:text-white" @activeClass="bg-teal-900 text-white">
+        {{truncate wine.title 30}}
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="fill-current w-3 transition-all duration-300 ease group-hover:text-white active:text-white">
+          <polygon points="16.172 9 10.101 2.929 11.515 1.515 20 10 19.293 10.707 11.515 18.485 10.101 17.071 16.172 11 0 11 0 9"/>
+        </svg>
+      </LinkTo>
+    </li>
+  {{/each}}
+</ul>

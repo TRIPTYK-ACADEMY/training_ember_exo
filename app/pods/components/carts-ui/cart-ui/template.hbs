@@ -1,0 +1,20 @@
+<div class="flex flex-col text-center bg-white border border-gray-200 rounded-lg shadow-xl transition-all duration-200 ease hover:bg-gray-100">
+  <div class="flex-1 flex flex-col p-6">
+    <img class="w-32 h-32 flex-shrink-0 mx-auto bg-black rounded-full object-cover" src={{@model.img}} alt={{@model.title}}/>
+    <h2 class="text-center text-lg text-teal-900 font-bold mt-8">
+      {{@model.title}}  
+    </h2>
+    <p class="text-left my-4">
+      {{truncate @model.description 120}}
+    </p>
+    <h3 class="text-3xl text-center text-teal-900 items-center font-bold cursor-pointer">{{@model.price}}<span class="text-sm"> €</span></h3>
+  </div>
+  <div class="flex">
+    <button type="button" class="h-16 rounded-bl-lg bg-teal-900 text-white font-bold w-1/2 flex justify-center items-center transition-all duration-200 ease hover:bg-teal-700 focus:outline-none">
+      Détail
+    </button>
+    <button {{on "click" (fn this.addToCart @model)}} type="button" class="h-16 rounded-br-lg bg-indigo-900 text-white font-bold w-1/2 flex justify-center items-center transition-all duration-200 ease hover:bg-indigo-700 focus:outline-none">
+      Acheter
+    </button>
+  </div>
+</div>

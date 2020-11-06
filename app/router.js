@@ -7,4 +7,10 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
+  this.route('shop', {path: "/magasin"});
+  this.route('wines', {path: "/stock"}, function() {
+    this.route('wine-detail', {
+      path: '/:wine_id'
+    });
+  });
 });
