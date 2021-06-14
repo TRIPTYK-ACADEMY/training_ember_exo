@@ -1,25 +1,56 @@
-<form class="mx-8 border-2 border-teal-900 p-8 rounded" {{on 'submit' this.save}} {{on 'reset' this.reset}} {{did-update this.update @wine}}>
+<form
+  class="mx-8 border-2 border-teal-900 p-8 rounded"
+  {{on "submit" this.save}}
+  {{on "reset" this.reset}}
+  {{did-insert this.update @wine}}
+  {{did-update this.update @wine}}
+>
   <div class="flex flex-col mb-4">
-    <label class="text-sm font-bold text-indigo-900 ml-3 mb-1" for="title">Nom du vin</label>
-    <Input class="px-4 py-2 text-teal-900 font-bold rounded border border-indigo-900 bg-white focus:outline-none" @value={{this.title}} />
+    <label class="text-sm font-bold text-indigo-900 ml-3 mb-1" for="title">Nom
+      du vin</label>
+    <Input
+      class="px-4 py-2 text-teal-900 font-bold rounded border border-indigo-900 bg-white focus:outline-none"
+      @value={{this.title}}
+    />
   </div>
   <div class="flex flex-col mb-4">
-    <label class="text-sm font-bold text-indigo-900 ml-3 mb-1" for="description">Description du vin</label>
-    <Textarea class="px-4 py-2 text-teal-900 font-bold rounded border border-indigo-900 bg-white focus:outline-none resize-none" @rows="6" @value={{this.description}} />
+    <label
+      class="text-sm font-bold text-indigo-900 ml-3 mb-1"
+      for="description"
+    >Description du vin</label>
+    <Textarea
+      class="px-4 py-2 text-teal-900 font-bold rounded border border-indigo-900 bg-white focus:outline-none resize-none"
+      @rows="6"
+      @value={{this.description}}
+    />
   </div>
   <div class="flex flex-col mb-4">
-    <label class="text-sm font-bold text-indigo-900 ml-3 mb-1" for="price">Prix du vin</label>
-    <Input class="px-4 py-2 text-teal-900 font-bold rounded border border-indigo-900 bg-white focus:outline-none" @value={{this.price}} />
+    <label class="text-sm font-bold text-indigo-900 ml-3 mb-1" for="price">Prix
+      du vin</label>
+    <Input
+      class="px-4 py-2 text-teal-900 font-bold rounded border border-indigo-900 bg-white focus:outline-none"
+      @value={{this.price}}
+    />
   </div>
   <div class="flex flex-col mb-4">
-    <label class="text-sm font-bold text-indigo-900 ml-3 mb-1" for="img">Url de l'image</label>
-    <Input class="px-4 py-2 text-teal-900 font-bold rounded border border-indigo-900 bg-white focus:outline-none" @value={{this.img}} />
+    <label class="text-sm font-bold text-indigo-900 ml-3 mb-1" for="img">Url de
+      l'image</label>
+    <Input
+      class="px-4 py-2 text-teal-900 font-bold rounded border border-indigo-900 bg-white focus:outline-none"
+      @value={{this.img}}
+    />
   </div>
   <div class="flex justify-end mt-8">
-    <button type="submit" class="px-6 py-3 rounded text-white bg-indigo-700 hover:bg-indigo-500 transition-all duration-200 ease focus:outline-none">
+    <button
+      type="submit"
+      class="px-6 py-3 rounded text-white bg-indigo-700 hover:bg-indigo-500 transition-all duration-200 ease focus:outline-none"
+    >
       Modifier
     </button>
-    <button type="reset" class="ml-4 px-6 py-3 rounded text-white bg-red-700 hover:bg-red-500 transition-all duration-200 ease focus:outline-none">
+    <button
+      type="reset"
+      class="ml-4 px-6 py-3 rounded text-white bg-red-700 hover:bg-red-500 transition-all duration-200 ease focus:outline-none"
+    >
       Annuler
     </button>
   </div>

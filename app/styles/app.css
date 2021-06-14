@@ -1,9 +1,9 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-.cartContent{
-  bottom: 10px
+.cartContent {
+  bottom: 10px;
 }
 
 .cartContent:after {
@@ -14,17 +14,17 @@
   border-top: none;
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
-  border-bottom: 16px solid #CBD5E0;
+  border-bottom: 16px solid #cbd5e0;
 }
 
-.scale-to-y{
+.scale-to-y {
   transform: scaleY(1) translateY(100%);
 }
 
-.scale-from-y{
+.scale-from-y {
   transform: scaleY(0) translateY(0);
 }
 
-.notification{
-  transform: translateY(-170%) translateX(100%);
+.notification {
+  transform: translateY(0) translateX(100%);
 }
